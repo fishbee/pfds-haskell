@@ -1,4 +1,4 @@
--- Unbalanced set definition as in PFDS Appendix A, pp 203
+-- Unbalanced set definition as in PFDS Appendix A, p 203
 
 {-# OPTIONS_GHC -XMultiParamTypeClasses #-}
 {-# OPTIONS_GHC -XFlexibleInstances #-}
