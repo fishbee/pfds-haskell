@@ -1,5 +1,5 @@
 Exercise 3.3: Complexity
-========================
+------------------------
 
 This is an attempt to show that the execution time of the fromList function in Exercise 3.3 (see Ex3_3.hs) is O(n).
 
