@@ -21,7 +21,7 @@ For T<sub>mhl</sub> to be O(n), we need for the sum above to be bounded by a con
 
 ![\frac{s}{2^{s+1}} / \frac{s - 1}{2^s} = \frac{2^s s}{2^{s+1}(s - 1)} = \frac{s}{2(s -1)}=\frac{1}{2} + \frac{1}{s}](ratio.gif)
 
-As s tends to infinity, the ratio tends to 1/2, so the sum converges. (In fact, [pluging it into Wolfram Alpha](http://www.wolframalpha.com/input/?i=sum+of+%28x-1%29%2F2^x) tells us that the sum converges to the starting value, so starting at s = 1, the sum tends to 1).
+As s tends to infinity, the ratio tends to 1/2, so the sum converges. (In fact, [pluging it into Wolfram Alpha](http://www.wolframalpha.com/input/?i=sum+of+%28x-1%29%2F2^x) tells us that the sum converges to 0 if we start at s = 0, and at starting at s = 1 means the sum converges to 1).
 
 In other words,
 
