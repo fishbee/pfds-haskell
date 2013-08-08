@@ -25,9 +25,9 @@ As s tends to infinity, the ratio tends to 1/2, so the sum converges. (In fact, 
 
 In other words,
 
-![T_{mhl}(n) \leq c k n](tmhl3.gif)
+![T_{mhl}(n) \leq k n](tmhl3.gif)
 
-Where c and k are constants, so T<sub>mhl</sub>(n) is O(n). Since fromList only does O(n) preprocessing on a list before passing it on to mergeHeapList, the execution time of fromList is also O(n).
+Where k is a constant, so T<sub>mhl</sub>(n) is O(n). Since fromList only does O(n) preprocessing on a list before passing it on to mergeHeapList, the execution time of fromList is also O(n).
 
 Shoutout: LaTeX to GIF conversion done with [CodeCogs](http://www.codecogs.com/latex/htmlequations.php).
 
