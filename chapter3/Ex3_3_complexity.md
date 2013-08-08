@@ -9,11 +9,11 @@ Calling mergeHeapList on a list of n one-element heaps results in the merge func
 
 ![T_{mhl}(n)=\sum_{s=1}^{\lg n} \frac{n}{2^s} T_m(2^{s-1})](tmhl0.gif)
 
-Since T<sub>m</sub>(n) is O(log n), we get, for some constant c
+Since T<sub>m</sub>(n) is O(log n), we get, for some constant c,
 
 ![T_{mhl}(n) \leq \sum_{s=1}^{\lg n} \frac{c n \lg(2^{s-1})}{2^s}](tmhl1.gif)
 
-Symplifying the above:
+Simplifying the above:
 
 ![T_{mhl}(n) \leq  c n \sum_{s=1}^{\lg n} \frac{s-1}{2^s}](tmhl2.gif)
 
@@ -29,6 +29,6 @@ In other words,
 
 Where c and k are constants, so T<sub>mhl</sub>(n) is O(n). Since fromList only does O(n) preprocessing on a list before passing it on to mergeHeapList, the execution time of fromList is also O(n).
 
-Shoutout: LaTeX to GIF conversion done with [CodeCogs](http://latex.codecogs.com).
+Shoutout: LaTeX to GIF conversion done with [CodeCogs](http://www.codecogs.com/latex/htmlequations.php).
 
 
