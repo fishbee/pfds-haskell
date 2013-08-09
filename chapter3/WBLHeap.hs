@@ -35,7 +35,7 @@ instance Heap WBLHeap where
   
   merge h1 E = h1
   merge E h2 = h2
-  merge h1@(T s1 x a1 b1) h2@(T s2 y a2 b2) =
+  merge h1@(T _ x a1 b1) h2@(T _ y a2 b2) =
     if x <= y then makeT x a1 (merge b1 h2)
     else makeT y a2 (merge h1 b2)
   
