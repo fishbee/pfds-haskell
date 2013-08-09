@@ -21,4 +21,9 @@
 -- an integer number of elements less than lg(n+1), i.e. floor(lg(n+1)).
 
 
+-- 3.4(b)
+--
+-- Modify the definition of the leftist heap data structure to implement
+-- weight-biased leftist heaps instead. See WBLHeap.hs
+
 
