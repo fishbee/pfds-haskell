@@ -27,3 +27,23 @@
 -- weight-biased leftist heaps instead. See WBLHeap.hs
 
 
+-- 3.4(c)
+--
+-- A version of the merge function for weight-biased leftist heaps that
+-- performs the merge in a single top-down pass (rather than applying makeT
+-- from the bottom up, like the original merge function).
+
+module Ex3_4 (merge) where
+import WBLHeap hiding (merge)
+
+merge h1 E = h1
+merge E h2 = h2
+merge h1@(T _ x _ _) h2@(T _ y _ _) =
+  let
+    mergeChildWithHeap (T s z a b) h =
+      if size a >= (size b + size h) then T (s + size h) z a (merge b h)
+      else T (s + size h) z (merge a h) b
+  in
+    if x <= y then mergeChildWithHeap h1 h2
+    else mergeChildWithHeap h2 h1
+
