@@ -47,3 +47,20 @@ merge h1@(T _ x _ _) h2@(T _ y _ _) =
     if x <= y then mergeChildWithHeap h1 h2
     else mergeChildWithHeap h2 h1
 
+
+-- 3.4(d)
+--
+-- The original version of the merge function requires that the children of a
+-- node are evaluated before that node can be used (this is due the fact that
+-- to compute the rank of a node, the rank of its right child must be computed
+-- first). In the version of merge defined above, the size and value at a node
+-- are known without requiring the evaluation of the children of that node.
+-- This means that, in a lazy language (like Haskell), the above version of
+-- merge can require less computation (if some parts of the resulting heap will
+-- never be traversed).
+--
+-- A similar observation applies to environments that support access to data
+-- structures by concurrently running threads. If one thread needs to use the
+-- result of a call to merge by another thread, the former could start its
+-- computation without waiting for the entire merge to be completed.
+
